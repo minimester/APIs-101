@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "6775b0e5-9c96-404c-957f-0ccffac728aa",
+		"name": "Movies Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16890072"
+	},
+	"item": [
+		{
+			"name": "Get all Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/movies",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/movies/:movieId",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "bac8c73c-005f-4f0f-9dd7-8dce7df14c97"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dune\",\n    \"genre\": \"Science Fiction\",\n    \"img\": \"https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/movies",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dune\",\n    \"genre\": \"Documentary\",\n    \"img\": \"https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/movies/:movieId",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "bac8c73c-005f-4f0f-9dd7-8dce7df14c97"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/movies/:movieId",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "bac8c73c-005f-4f0f-9dd7-8dce7df14c97"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
